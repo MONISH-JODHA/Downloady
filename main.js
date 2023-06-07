@@ -1,9 +1,9 @@
 
-function download(filename,content,content1,content2,content3,content4,content5){
+function download(filename,content,content1,content2,content3){
     console.log("Function is called");
     const element=document.createElement("a");
 
-    var blob = new Blob([content,content1,content2,content3,content4,content5]
+    var blob = new Blob([content,content1,content2,content3]
         ,{type:"text/plain"});
     const fileurl=URL.createObjectURL(blob);
 
@@ -23,21 +23,17 @@ document.addEventListener("DOMContentLoaded",function(){
     
 
         const filename=document.getElementById("file").value;
-        const ee=document.getElementById("ff").value;
+        const ee=document.getElementById("name").value;
         const content=ee+",";
-        const ee1=document.getElementById("ff1").value;
+        const ee1=document.getElementById("email").value;
         const content1=ee1+",";
-        const ee2=document.getElementById("ff2").value;
+        const ee2=document.getElementById("subject").value;
         const content2=ee2+",";
-        const ee3=document.getElementById("ff3").value;
+        const ee3=document.getElementById("message").value;
         const content3=ee3+",";
-        const ee4=document.getElementById("ff4").value;
-        const content4=ee4+",";
-        const ee5=document.getElementById("ff5").value;
-        const content5=ee5+"";
-
+       
 if (filename && content){
-    download(filename,content,content1,content2,content3,content4,content5);
+    download(filename,content,content1,content2,content3);
     
 }
 
