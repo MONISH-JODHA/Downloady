@@ -39,3 +39,4 @@ if (filename && content){
 
     })
 })
+console.log("hi node")
